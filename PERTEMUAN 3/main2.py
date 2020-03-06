@@ -17,3 +17,16 @@ data = np.concatenate((spread, center, flier_high, flier_low), 0)
 
 # basic plot
 plt.boxplot(data)
+
+N = 200
+x = np.random.rand(N)
+y = np.random.rand(N)
+
+colors = np.random.rand(N)
+# 0 to 15 point radiuses
+area = np.pi * (15 * np.random.rand(N))**2
+plt.figure()
+plt.scatter(x, y, s=5, c='blue', alpha=1)
+plt.figure()
+plt.scatter(x, y, s=area, c=colors, alpha=0.5)
+plt.show()
